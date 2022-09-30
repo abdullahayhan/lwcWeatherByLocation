@@ -1,0 +1,21 @@
+<template>
+    <lightning-layout-item size="3" medium-device-size="4" padding="around-small">
+            <div class="slds-grid slds-grid--vertical-align-start" style="margin-left:50px">
+                <div style="margin-top:-40px">
+                    <img src={getIcon} class="slds-grid--vertical-align-center" style="width:100px;height:100px; margin-top: 25px;"></img>
+                </div>
+                <div>
+                    <div class="temp-main" style="font-size: 20px;"> <b>{getConvertedTemp} | {getMain} </b></div>
+                    <table width="300px" style="font-size:13px">
+                        <tr>
+                            <td>Feels : <b>{getFeelsLike}</b></td>
+                        </tr>
+                        <tr>
+                            <td>Humidity : <b>{getHumidity}%</b> / Wind : <b>{getWindSpeed}</b></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <lightning-map map-markers={mapMarkers} zoom-level={zoomLevel} style="height: 150px; width: 250px; margin-left: 40px;"></lightning-map>
+</lightning-layout-item>
+</template>
