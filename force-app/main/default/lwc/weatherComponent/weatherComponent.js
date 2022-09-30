@@ -64,6 +64,7 @@ export default class weatherComponent extends LightningElement {
             return '--'
         }
     }
+
     get getMain() {
         if (this.result) {
             return (this.result.cityMain).toUpperCase();
