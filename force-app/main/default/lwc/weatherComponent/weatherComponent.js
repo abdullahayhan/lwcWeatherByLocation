@@ -49,7 +49,7 @@ export default class weatherComponent extends LightningElement {
             var now = new Date().getHours();
             if (now <= sunset & now >= sunrise) {
                 time = 'Day';
-            } else if (sunrise < 6 || now > sunset) {
+            } else if (now < sunrise || now > sunset) {
                 time = 'Night';
             }
             console.log(time);
