@@ -1,7 +1,8 @@
 public with sharing class WeatherController {
     public static Httpresponse GetWeatherCalloutbylatlon(String lat, string lon) {
         HttpRequest req = new HttpRequest();
-        string apiKey ='3cdb079cbd07da931918b24c8a79bf39';
+        // its not work with api key go to openweathermap and subscribe get your special api key.
+        string apiKey ='your_api_key';
         req.setEndpoint('https://api.openweathermap.org/data/2.5/weather?lat='+ lat +'&lon='+ lon+'&appid='+apiKey);
         req.setMethod('GET');
         Http http = new Http();
